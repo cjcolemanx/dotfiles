@@ -26,6 +26,7 @@ declare -a DOTFILES=(
 	# "evremap"
 	# "eww"
 	# "feh"
+	"git"
 	"flameshot"
 	# "fish"
 	# "git"
