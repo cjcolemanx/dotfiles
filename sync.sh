@@ -49,6 +49,7 @@ declare -a DOTFILES=(
 	"ranger"
 	"rofi"
 	"shell"
+	"sxhkd"
 	# "spacemacs"
 	"systemd"
 	# "taskwarrior"

@@ -1,0 +1,28 @@
+#############################
+### ~|     Screenshots     |~
+###    sxhkdrc.screenshots
+###
+###   - M+C: flameshot 
+###
+### Uses: flameshot
+#############################
+
+# Focused Desktop (save and clip)
+super + ctrl + shift + s
+	$HOME/bin/sxhkd/screenshot.sh 'screen'
+
+# All Desktops (save and clip)
+super + ctrl + shift + p
+	$HOME/bin/sxhkd/screenshot.sh 'full'
+
+# NOTE: unfocuses window
+# Snipping (save and clip) #1 
+super + ctrl + s
+	$HOME/bin/sxhkd/screenshot.sh 'gui'
+
+# NOTE: unfocuses window
+# Snipping (save and clip) #2
+Print
+	$HOME/bin/sxhkd/screenshot.sh 'gui'
+
+## vim: ft=sxhkd

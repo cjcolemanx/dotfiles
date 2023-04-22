@@ -1,0 +1,109 @@
+########################################
+### ~|     Media     |~
+###    sxhkdrc.media
+###    
+###   - C+A, m: MPC, Miniplayer
+###   - C+A+S : amixer, pavucontrol
+###    
+### Uses: 
+###   - mpc 
+###   - mpd 
+###   - pavucontrol 
+###   - amixer 
+###   - miniplayer (see comment)
+########################################
+
+# Volume
+ctrl + alt + m; ctrl + alt + {j,k}
+  $HOME/bin/mpd/change_mpd_state.sh {'down','up'}
+
+# Incremental Seeking
+ctrl + alt + m; ctrl + alt + {comma,period}
+  $HOME/bin/mpd/change_mpd_state.sh {'seek_backward', 'seek_forward'}
+
+# Track Switching
+ctrl + alt + m; ctrl + alt + {p,n}
+  $HOME/bin/mpd/change_mpd_state.sh {'prev', 'next'}
+
+# Play/Pause
+ctrl + alt + m; ctrl + alt + m
+  $HOME/bin/mpd/change_mpd_state.sh 'toggle_play'
+
+# Hard Stop
+ctrl + alt + m; ctrl + alt + d
+  $HOME/bin/mpd/change_mpd_state.sh 'stop'
+
+# Hard Play
+ctrl + alt + m; ctrl + alt + c
+  $HOME/bin/mpd/change_mpd_state.sh 'play'
+
+# Check MPC status
+ctrl + alt + m; ctrl + alt + slash
+  $HOME/bin/mpd/change_mpd_state.sh
+
+# Shuffle playlist
+ctrl + alt + m; ctrl + alt + u
+  $HOME/bin/mpd/change_mpd_state.sh 'shuffle'
+
+# Repeat toggle playlist
+ctrl + alt + m; ctrl + alt + r
+  $HOME/bin/mpd/change_mpd_state.sh 'repeat'
+
+# Raise rating
+ctrl + alt + m; ctrl + alt + equal
+  $HOME/bin/mpd/change_mpd_state.sh 'rate_up'
+
+# Lower rating
+ctrl + alt + m; ctrl + alt + minus
+  $HOME/bin/mpd/change_mpd_state.sh 'rate_down'
+
+# Rate
+ctrl + alt + m; ctrl + alt + {1-5}
+  $HOME/bin/mpd/change_mpd_state.sh 'rate' {1-5}
+
+# Change album
+ctrl + alt + m; ctrl + alt + {bracketleft,bracketright}
+	$HOME/bin/mpd/change_mpd_state.sh {'prev_album','next_album'}
+
+# Change Playlist
+ctrl + alt + m; ctrl + alt + l
+  $HOME/bin/sxhkd/generic_popup_window.sh "$HOME/bin/mpd/load_playlist.sh" "MPD Playlist"
+
+### WARN: Uses on https://github/GuradKenzie/miniplayer
+### Miniplayer
+##ctrl + alt + m; ctrl + alt + s
+##  $HOME/bin/sxhkd/miniplayer.sh
+
+ctrl + alt + m; ctrl + alt + s
+  $HOME/bin/sxhkd/toggle_ncmpcpp_window.sh
+
+# NOTE: ALSA stuff is too hard, so I use this GUI
+# Pavucontrol
+ctrl + shift + alt + equal
+  pavucontrol --class pavucontrol
+
+# Volume down
+ctrl + shift + alt + j
+  $HOME/bin/sxhkd/change_volume.sh 'down'
+
+# Volume up
+ctrl + shift + alt + k
+  $HOME/bin/sxhkd/change_volume.sh 'up'
+
+# Mute Volume
+ctrl + shift + alt + m
+  $HOME/bin/sxhkd/change_volume.sh 'mute'
+
+# Check Volume
+ctrl + shift + alt + l
+  $HOME/bin/sxhkd/change_volume.sh 'status'
+
+# Volume down (headphones)
+XF86AudioLowerVolume
+  $HOME/bin/sxhkd/change_volume.sh 'down_head'
+
+# Volume up (headphones)
+XF86AudioRaiseVolume
+  $HOME/bin/sxhkd/change_volume.sh 'up_head'
+
+## vim: ft=sxhkd

@@ -1,0 +1,79 @@
+###########################
+### ~|     Launchers     |~
+###    sxhkdrc.launchers
+###
+###  - M, SPC: Launcher prefix
+###
+### Prefixed keys:
+###   f: Dolphin (file manager GUI)
+###   l: Weblinks
+###   m: MPD/Music
+###   r: Restart Script
+###   s: Screenshot
+###   t: Qbittorrent
+###   v: Volume
+###   y: Scripts
+###
+### Non-prefixed keys:
+###   o: App Launcher
+###   ~: Scratchpad
+###
+### Terminals:
+###   Super+Return: Kitty
+###   Super+Return+Shift: Alacritty
+###   Super+Return+Control: UXVRT
+###########################
+
+# Terminal
+super + {_, shift, ctrl} + Return 
+	{$TERMINAL, alacritty, uxvrt}
+
+# Browser
+super + space; super + b
+  $BROWSER
+
+# [M]PD
+super + space; super + {m}
+  bash  { ~/.config/rofi/applets/bin/mpd.sh &}
+
+# [V]olume
+super + space; super + {v}
+  bash  { ~/.config/rofi/applets/bin/volume.sh &}
+
+# [S]creenshot
+super + space; super + {s}
+  bash  { ~/.config/rofi/applets/bin/screenshot.sh &}
+
+# [L]inks
+super + space; super + {l}
+  bash  { ~/.config/rofi/applets/bin/quicklinks.sh &}
+
+## [F]iles - Terminal (Ranger)
+## super + {f}
+## bash  {~/.config/rofi/scripts/my-scripts/ranger.sh &}
+
+# [F]iles - GUI (Dolphin)
+super + space; super + {f}
+  dolphin 
+
+# Scripts
+super + space; super + {y}
+  bash  {~/.config/rofi/scripts/my-scripts/shell_scripts.sh &}
+
+# [T]orrents
+super + space; super + {t}
+  qbittorrent
+
+# [R]estarter (processes)
+super + space; super + {r}
+  bash  {~/.config/rofi/scripts/my-scripts/master_restarter.sh &}
+
+# [O]pen Application
+super + o
+  bash ~/.config/polybar/grayblocks/scripts/launcher.sh &
+
+# Scratchpad
+super + grave 
+	$HOME/bin/sxhkd/scratchpad.sh
+
+## vim: ft=sxhkd

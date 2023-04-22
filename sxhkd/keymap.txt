@@ -1,0 +1,124 @@
+ ┏───────────────┓
+~|     BSPWM     |~
+ ┗───────────────┛───────────────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                      │
+	│  0: Focus Node                                        |= super + {h,j,k,l}                                           │
+	│  1: Swap Node                                         |= super + shift + {h,j,k,l}                                   │
+	│  2: Focus Next/Prev Node (cycles all windows)         |= super + {p,n}                                               │
+	│  3: Focus Next/Prev Node (cycles this desktop)        |= super + {u,i}                                               │
+	│  4: [S]end to Desktop                                 |= super + s; super + {p, n}                                   │
+	│  5: [S]end to Monitor                                 |= super + s; super + semicolon                                │
+	│  6: [M]onocle desktop                                 |= super + m                                                   │
+	│  7: [Q]uit - close window                             |= super + q                                                   │
+	│  8: [T]iled and Psuedo-Tiled                          |= super + {t,shift + t}                                       │
+	│  9: Sticky                                            |= super + {_,shift + } d                                      │
+	│ 10: [F]loat                                           |= super + {_,shift + } f                                      │
+	│ 11: Fullscreen (maximize)                             |= super + {_,shift + } comma                                  │
+	│ 12: [L]ock window                                     |= super + ctrl + l                                            │
+	│ 13: i3-like preselection                              |= super + {b,v,w,z}                                           │
+	│ 14: i3-like preselection                              |= super + x                                                   │
+	│ 15: "Minimize" window                                 |= super + period                                              │
+	│ 16: Unhide first minimized window                     |= super + slash                                               │
+	│ 17: Focus other monitor                               |= super + y                                                   │
+	│ 18: Focus Desktop (local)                             |= super + semicolon                                           │
+	│ 19: Focus Desktop (global)                            |= super + BackSpace                                           │
+	│ 20: Focus desktop (global)                            |= super + ctrl + BackSpace                                    │
+	│ 21: Focus desktop (local)                             |= super + ctrl + backslash                                    │
+	│ 22: Send to desktop (global)                          |= super + backslash                                           │
+	│ 23: Swap Smallest and Biggest Nodes                   |= super + {_, shift +} {1-9,0}                                │
+	│ 24: [R]otate Desktop                                  |= super + {g, shift + g}                                      │
+	│ 25: Rotate Nodes (cyclical)                           |= super + {_, shift + } r                                     │
+	│ 26: Rotate Nodes (flip)                               |= super + {_, shift + } e                                     │
+	│ 27: Smart Resize                                      |= super + ctrl + {r,e}                                        │
+	│ 28: Smart Resize Bigger                               |= super + {equal,bracketleft,bracketright,minus}              │
+	│ 29: Util - reset vertical padding                     |= super + alt + {equal,bracketleft,bracketright,minus}        │
+	│ 30: Change window gap                                 |= super + alt + 0                                             │
+	│ 31: Change split ratios                               |= super + ctrl + {minus,equal}                                │
+	│ 32: Move Floating Window                              |= super + ctrl + {1-9}                                        │
+	│ 33: Move Floating Window Faster                       |= super + ctrl + {h,j,k,l}                                    │
+	│                                                                                                                      │
+  ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
+
+ ┏───────────────┓
+~|     Media     |~
+ ┗───────────────┛───────────────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                      │
+	│  0: Volume                                            |= ctrl + alt + m; ctrl + alt + {j,k}                          │
+	│  1: Incremental Seeking                               |= ctrl + alt + m; ctrl + alt + {comma,period}                 │
+	│  2: Track Switching                                   |= ctrl + alt + m; ctrl + alt + {p,n}                          │
+	│  3: Play/Pause                                        |= ctrl + alt + m; ctrl + alt + m                              │
+	│  4: Hard Stop                                         |= ctrl + alt + m; ctrl + alt + d                              │
+	│  5: Hard Play                                         |= ctrl + alt + m; ctrl + alt + c                              │
+	│  6: Check MPC status                                  |= ctrl + alt + m; ctrl + alt + slash                          │
+	│  7: Shuffle playlist                                  |= ctrl + alt + m; ctrl + alt + u                              │
+	│  8: Repeat toggle playlist                            |= ctrl + alt + m; ctrl + alt + r                              │
+	│  9: Raise rating                                      |= ctrl + alt + m; ctrl + alt + equal                          │
+	│ 10: Lower rating                                      |= ctrl + alt + m; ctrl + alt + minus                          │
+	│ 11: Rate                                              |= ctrl + alt + m; ctrl + alt + {1-5}                          │
+	│ 12: Change album                                      |= ctrl + alt + m; ctrl + alt + {bracketleft,bracketright}     │
+	│ 13: Change Playlist                                   |= ctrl + alt + m; ctrl + alt + l                              │
+	│ 14: Pavucontrol                                       |= ctrl + alt + m; ctrl + alt + s                              │
+	│ 15: Volume down                                       |= ctrl + shift + alt + equal                                  │
+	│ 16: Volume up                                         |= ctrl + shift + alt + j                                      │
+	│ 17: Mute Volume                                       |= ctrl + shift + alt + k                                      │
+	│ 18: Check Volume                                      |= ctrl + shift + alt + m                                      │
+	│ 19: Volume down (headphones)                          |= ctrl + shift + alt + l                                      │
+	│ 20: Volume up (headphones)                            |= XF86AudioLowerVolume                                        │
+	│                                                                                                                      │
+  ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
+
+ ┏───────────────────┓
+~|     Launchers     |~
+ ┗───────────────────┛───────────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                      │
+	│  0: Terminal                                          |= super + {_, shift, ctrl} + Return                           │
+	│  1: Browser                                           |= super + space; super + b                                    │
+	│  2: [M]PD                                             |= super + space; super + {m}                                  │
+	│  3: [V]olume                                          |= super + space; super + {v}                                  │
+	│  4: [S]creenshot                                      |= super + space; super + {s}                                  │
+	│  5: [L]inks                                           |= super + space; super + {l}                                  │
+	│  6: [F]iles - GUI (Dolphin)                           |= super + space; super + {f}                                  │
+	│  7: Scripts                                           |= super + space; super + {y}                                  │
+	│  8: [T]orrents                                        |= super + space; super + {t}                                  │
+	│  9: [R]estarter (processes)                           |= super + space; super + {r}                                  │
+	│ 10: [O]pen Application                                |= super + o                                                   │
+	│ 11: Scratchpad                                        |= super + grave                                               │
+	│                                                                                                                      │
+  ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
+
+ ┏───────────────────────┓
+~|     Notifications     |~
+ ┗───────────────────────┛───────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                      │
+	│  0: Hide All Notifications                            |= alt + BackSpace                                             │
+	│  1: Display Notifications (repeatable)                |= alt + shift + backslash                                     │
+	│  2: Close Latest Notification                         |= alt + backslash                                             │
+	│  3: Pause custom notifications                        |= alt + ctrl + shift + BackSpace                              │
+	│  4: Notify User of Package Updates                    |= alt + ctrl + 1                                              │
+	│                                                                                                                      │
+  ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
+
+ ┏───────────────┓
+~|     Other     |~
+ ┗───────────────┛───────────────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                      │
+	│  0: [C]lipmenu                                        |= alt + ctrl + {c}                                            │
+	│  1: Windows-like alt-tabbing                          |= alt + Tab                                                   │
+	│  2: Lower/Raise Brightness                            |= super + alt + b; super + alt + {j,k}                        │
+	│  3: Increase/Decrease Gamma                           |= super + alt + b; super + alt + {u,i}                        │
+	│  4: Increase/Decrease Both Gamma and Brightness       |= super + alt + b; super + alt + {n,p}                        │
+	│  5: Reset Brightness and Gamma                        |= super + alt + b; super + alt + r                            │
+	│                                                                                                                      │
+  ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
+
+ ┏─────────────────────┓
+~|     Screenshots     |~
+ ┗─────────────────────┛─────────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                      │
+	│  0: Focused Desktop (save and clip)                   |= super + ctrl + shift + s                                    │
+	│  1: All Desktops (save and clip)                      |= super + ctrl + shift + p                                    │
+	│  2: Snipping (save and clip) #1                       |= super + ctrl + s                                            │
+	│  3: Snipping (save and clip) #2                       |= Print                                                       │
+	│                                                                                                                      │
+  ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
+

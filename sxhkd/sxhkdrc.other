@@ -1,0 +1,43 @@
+#######################
+### ~|     Other     |~
+###    sxhkdrc.other
+###
+### Generalized keybinds, including things like clipboard and such
+###
+### Uses: clipmenu
+#######################
+
+# [C]lipmenu
+alt + ctrl + {c}
+  clipmenu 
+
+# Windows-like alt-tabbing 
+# FIXME: not working with rofi - no combi enabled.
+alt + Tab
+	rofi -show combi -combi-modes "window"
+
+# Lower/Raise Brightness
+super + alt + b; super + alt + {j,k} 
+  $HOME/bin/sxhkd/change_gamma.sh {decrease_brightness,increase_brightness}
+
+# Increase/Decrease Gamma
+super + alt + b; super + alt + {u,i} 
+  $HOME/bin/sxhkd/change_gamma.sh {decrease_gamma,increase_gamma}
+
+# Increase/Decrease Both Gamma and Brightness
+super + alt + b; super + alt + {n,p} 
+  $HOME/bin/sxhkd/change_gamma.sh {decrease,increase}
+
+# Reset Brightness and Gamma
+super + alt + b; super + alt + r
+  $HOME/bin/sxhkd/change_gamma.sh
+
+## source "$HOME/bin/change-gamma.sh" {decrease_brightness,increase_brightness}
+
+## Raise Gamma (too dark)
+##super + e; super + {equal, equal; super + equal}
+
+## # Reset gamma
+## super + e; super + {-, -; super + -}
+
+## vim: ft=sxhkd

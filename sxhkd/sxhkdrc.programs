@@ -1,0 +1,9 @@
+##################################
+### ~|     Program Specific     |~
+###    sxhkdrc.programs
+###
+### Uses: `./scripts/run_if_window_matches.sh`
+##################################
+
+
+## vim: ft=sxhkd

@@ -1,0 +1,14 @@
+########################
+### ~|     <NAME>     |~
+###    sxhkdrc.<NAME>
+###
+### Description
+###
+### Uses: 
+#######################
+
+## DESCRIPTION OF COMMAND
+## super + super; super + duper
+##   notify-send "Hello" "...World!"
+
+# vim: ft=sxhkd

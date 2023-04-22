@@ -1,0 +1,33 @@
+###############################
+### ~|     Notifications     |~
+###    sxhkdrc.notifications
+###
+###   - alt + backspace
+###   - alt + backslash
+###   - alt + shift + backslash
+###
+### Some notifications are handled by other keys (check media and related scripts)
+### Uses: Dunst
+###############################
+
+# Hide All Notifications
+alt + BackSpace
+  dunstctl close-all
+
+# Display Notifications (repeatable)
+alt + shift + backslash
+  dunstctl history-pop
+
+# Close Latest Notification
+alt + backslash
+  dunstctl close
+
+# Pause custom notifications
+alt + ctrl + shift + BackSpace
+  $HOME/bin/notifications/toggle-custom-notifications.sh
+
+# Notify User of Package Updates 
+alt + ctrl + 1
+  $HOME/bin/notifications/notify-package-updates.sh
+
+## vim: ft=sxhkd
