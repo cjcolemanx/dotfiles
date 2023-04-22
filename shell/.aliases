@@ -183,4 +183,5 @@ if (( UID != 0 )); then
   alias scat='sudo cat'
   alias svim='sudoeit'
 fi
-# vim; ft=sh
+
+# vim: ft=sh
