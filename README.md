@@ -7,7 +7,7 @@
 
 - **OS**: Arch Linux
 - **Window Manager**: BSPWM + SXHKD (hotkeys)
-- **Compositor**: Piccom
+- **Compositor**: Picom
 - **Bar**: Polybar
 - **Launcher and Menus**: Rofi
 - **Media**: mpc + mpd + ncmpcpp (music) and mpv + vlc (video)

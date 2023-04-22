@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 calc() {
-	echo "scale=3;$@" | bc -l
+	echo "scale=3;$*@" | bc -l
 }

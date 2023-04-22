@@ -22,35 +22,37 @@ map [fullscreen] <C-j> zoom out
 map [fullscreen] g goto top
 map [fullscreen] <Space> toggle_fullscreen
 
-set default-bg                  "#0E1018"
-set default-fg                  "#ebdbb2"
+# Generated Pywal colors (only touch things above this line)
+set recolor "true"
 
-set statusbar-fg                "#ffffff"
-set statusbar-bg                "#0E1018"
+set completion-bg "#15161a"
+set completion-fg "#c4c4c5"
+set completion-group-bg "#15161a"
+set completion-group-fg "#37568c"
+set completion-highlight-bg "#c4c4c5"
+set completion-highlight-fg "#15161a"
 
-set inputbar-bg                 "#0E1018"
-set inputbar-fg                 "#fbf1c7"
+set recolor-lightcolor "#15161a"
+set recolor-darkcolor "#c4c4c5"
+set default-bg "#15161a"
 
-set notification-bg             "#0E1018"
-set notification-fg             "#fbf1c7"
+set inputbar-bg "#15161a"
+set inputbar-fg "#c4c4c5"
+set notification-bg "#15161a"
+set notification-fg "#c4c4c5"
+set notification-error-bg "#10386f"
+set notification-error-fg "#c4c4c5"
+set notification-warning-bg "#10386f"
+set notification-warning-fg "#c4c4c5"
+set statusbar-bg "#15161a"
+set statusbar-fg "#c4c4c5"
+set index-bg "#15161a"
+set index-fg "#c4c4c5"
+set index-active-bg "#c4c4c5"
+set index-active-fg "#15161a"
+set render-loading-bg "#15161a"
+set render-loading-fg "#c4c4c5"
 
-set notification-error-bg       "#1d2021"
-set notification-error-fg       "#fb4934"
-
-set notification-warning-bg     "#1d2021"
-set notification-warning-fg     "#fb4934"
-
-set highlight-color             "#fabd2f"
-set highlight-active-color      "#83a598"
-
-set completion-bg               "#3c3836"
-set completion-fg               "#83a598"
-
-set completion-highlight-fg     "#fbf1c7"
-set completion-highlight-bg     "#83a598"
-
-set recolor-lightcolor          "#0E1018"
-set recolor-darkcolor           "#ffffff"
-
-set recolor                     "false"
-set recolor-keephue             "true"
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard

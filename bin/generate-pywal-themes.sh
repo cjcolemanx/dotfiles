@@ -12,3 +12,9 @@ wal --backend "$PYWAL_BACKEND" -i "$WALLPAPER" --preview
 
 # Brave/Chromium
 . "$HOME/bin/theme/generate-pywal-theme-chromium.sh"
+
+# Brave/Polybar
+. "$HOME/bin/theme/generate-pywal-theme-polybar.sh"
+
+# Zathura
+. "$HOME/bin/theme/generate-pywal-theme-zathura.sh"
