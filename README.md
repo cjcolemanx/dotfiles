@@ -5,29 +5,18 @@
 > Doing a lot of reorganizing right now, so practically everything is subject to
 > change
 
-**OS**: Arch Linux
-
-**Window Manager**: BSPWM + SXHKD (hotkeys)
-
-**Bar**: Polybar
-
-**Launcher and Menus**: Rofi
-
-**Media**: mpc + mpd + ncmpcpp (music) and mpv + vlc (video)
-
-**Shell**: zsh
-
-**Terminal**: Kitty
-
-**Browser**: Brave + qutebrowser
-
-**Editor**: Neovim
-
-**Email and RSS**: NeoMutt + Newsboat
-
-**Notifications**: Dunst
-
-**Screenshots**: Flameshot
+- **OS**: Arch Linux
+- **Window Manager**: BSPWM + SXHKD (hotkeys)
+- **Bar**: Polybar
+- **Launcher and Menus**: Rofi
+- **Media**: mpc + mpd + ncmpcpp (music) and mpv + vlc (video)
+- **Shell**: zsh
+- **Terminal**: Kitty
+- **Browser**: Brave + qutebrowser
+- **Editor**: Neovim
+- **Email and RSS**: NeoMutt + Newsboat
+- **Notifications**: Dunst
+- **Screenshots**: Flameshot
 
 I have a lot of scripts in the `bin` folder.
 
@@ -60,3 +49,6 @@ TODO
 - Keybinds are everywhere, so expect to dig if you use any of the configs as is
 - In places where I've removed personal info, I've tried to be diligent and list
   steps to replace it with yours but I can't guarantee it will work
+- I keep most of my `sxhkd` binds in separate files to better ensure there are
+  as few conflicts as possible. Read the README.md in `sxhkd/` for info on how
+  to modify.
