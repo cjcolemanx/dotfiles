@@ -1,5 +1,7 @@
 # My Dotfiles
 
+![Wow!](./.shots/2023-04-22_12-44.png)
+
 > Doing a lot of reorganizing right now, so practically everything is subject to
 > change
 
