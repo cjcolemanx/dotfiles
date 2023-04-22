@@ -1,0 +1,73 @@
+xorg-xrandr
+calcurse
+task
+timew
+polybar
+dmenu
+picom
+feh
+nitrogen
+alsa-utils
+zsh
+starship
+nvidia-settings
+bash-completions
+tmux
+mesa
+pipewire-pulse
+godo
+zip unzip
+bashtop
+samba
+nicotine+
+calibre
+mp3info
+quodlibet
+pip
+pandoc
+texlive-core
+mpd
+mpc
+ncmpcpp
+dunst
+luarocks
+ueberzug
+dotnet-runtime
+dotnet-sdk
+S aspnet-runtime
+kitty
+love
+blueman
+unclutter
+xdotool
+xdo
+inotify-tools
+chafa
+git-delta
+glow
+xautomation
+most
+i3
+i3blocks
+python-pywal
+bat
+sysstat
+conky
+xorg-xauth
+mdcat
+shismtracker
+milkytracker
+musecore
+yabause-qt
+ppsspp
+mame
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+awesome-terminal-fonts
+mpv # media player
+vlc # media player (I like options)
+yt-dlp # for youtube in mpv
+cyrus-sasl # for gmail in neomutt
+pass # Password manager
+lynx # Text browser

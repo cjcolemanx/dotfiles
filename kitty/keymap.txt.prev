@@ -1,0 +1,86 @@
+ ┏────────────────┓ 
+~| Kitty Terminal |~
+ ┗────────────────┛ ────────────────────────────────────────────────────────────────────────────────────────────────────────┓
+	│                                                                                                                   │
+	│                                                                                    Kitty Mod: kitty_mod ctrl+shift│
+	│                                                                                                                   │
+	│                                                                                                                   │
+	│ ctrl+alt+t                                         |=  ctrl+alt+t no_op                                           │
+	│ ctrl+alt+l                                         |=  ctrl+alt+l no_op                                           │
+	│ ctrl+alt+h                                         |=  ctrl+alt+h no_op                                           │
+	│ ctrl+alt+j                                         |=  ctrl+alt+j no_op                                           │
+	│ ctrl+alt+k                                         |=  ctrl+alt+k no_op                                           │
+	│ ctrl+alt+m                                         |=  ctrl+alt+m no_op                                           │
+	│ ctrl+alt+f                                         |=  ctrl+alt+f no_op                                           │
+	│ ctrl+alt+w                                         |=  ctrl+alt+w no_op                                           │
+	│ alt+g                                              |=  alt+g no_op                                                │
+	│ alt+u                                              |=  alt+u no_op                                                │
+	│ alt+w                                              |=  alt+w no_op                                                │
+	│ alt+s                                              |=  alt+s no_op                                                │
+	│ kitty_mod+c                                        |=  kitty_mod+c combine : launch_hidden notify-send -a "Kitty" "Config Reloaded" : load_conffig_file│
+	│ kitty_mod+;                                        |=  kitty_mod+; next_layout                                    │
+	│ kitty_mod+'                                        |=  kitty_mod+' previous_layout                                │
+	│ kitty_mod+t                                        |=  kitty_mod+t goto_layout tall                               │
+	│ kitty_mod+f                                        |=  kitty_mod+f goto_layout fat                                │
+	│ kitty_mod+s                                        |=  kitty_mod+s goto_layout splits                             │
+	│ kitty_mod+m                                        |=  kitty_mod+m toggle_layout stack                            │
+	│ alt+-                                              |=  alt+- resize_window narrower 2                             │
+	│ alt+=                                              |=  alt+= resize_window wider                                  │
+	│ alt+[                                              |=  alt+[ resize_window shorter                                │
+	│ alt+]                                              |=  alt+] resize_window taller                                 │
+	│ alt+shift+-                                        |=  alt+shift+- layout_action decrease_num_full_size_windows   │
+	│ alt+shift+=                                        |=  alt+shift+= layout_action increase_num_full_size_windows   │
+	│ alt+shift+[                                        |=  alt+shift+[ layout_action mirror true                      │
+	│ alt+shift+]                                        |=  alt+shift+] layout_action mirror false                     │
+	│ alt+shift+-                                        |=  alt+shift+- layout_action move_to_screen_edge left         │
+	│ alt+shift+=                                        |=  alt+shift+= layout_action move_to_screen_edge right        │
+	│ alt+shift+[                                        |=  alt+shift+[ layout_action move_to_screen_edge bottom       │
+	│ alt+shift+]                                        |=  alt+shift+] layout_action move_to_screen_edge top          │
+	│ kitty_mod+space>kitty_mod+t                        |=  kitty_mod+space>kitty_mod+t select_tab                     │
+	│ alt+shift+enter                                    |=  alt+shift+enter new_tab                                    │
+	│ alt+n                                              |=  alt+n next_tab                                             │
+	│ alt+p                                              |=  alt+p previous_tab                                         │
+	│ alt+.                                              |=  alt+. move_tab_forward                                     │
+	│ alt+,                                              |=  alt+, move_tab_backward                                    │
+	│ alt+1                                              |=  alt+1 goto_tab 1                                           │
+	│ alt+2                                              |=  alt+2 goto_tab 2                                           │
+	│ alt+3                                              |=  alt+3 goto_tab 3                                           │
+	│ alt+4                                              |=  alt+4 goto_tab 4                                           │
+	│ alt+5                                              |=  alt+5 goto_tab 5                                           │
+	│ kitty_mod+space>kitty_mod+r                        |=  kitty_mod+space>kitty_mod+r detach_window : detach_tab     │
+	│ kitty_mod+r                                        |=  kitty_mod+r detach_window ask                              │
+	│ alt+enter                                          |=  alt+enter new_window                                       │
+	│ alt+q                                              |=  alt+q close_window                                         │
+	│ alt+u                                              |=  alt+u next_window                                          │
+	│ alt+i                                              |=  alt+i previous_window                                      │
+	│ kitty_mod+p                                        |=  kitty_mod+p scroll_page_up                                 │
+	│ kitty_mod+n                                        |=  kitty_mod+n scroll_page_down                               │
+	│ kitty_mod+b                                        |=  kitty_mod+b scroll_to_prompt 0                             │
+	│ alt+h                                              |=  alt+h neighboring_window left                              │
+	│ alt+j                                              |=  alt+j neighboring_window down                              │
+	│ alt+k                                              |=  alt+k neighboring_window up                                │
+	│ alt+l                                              |=  alt+l neighboring_window right                             │
+	│ alt+shift+h                                        |=  alt+shift+h move_window left                               │
+	│ alt+shift+j                                        |=  alt+shift+j move_window down                               │
+	│ alt+shift+k                                        |=  alt+shift+k move_window up                                 │
+	│ alt+shift+l                                        |=  alt+shift+l move_window right                              │
+	│ kitty_mod+y                                        |=  kitty_mod+y layout_action rotate                           │
+	│ kitty_mod+space>kitty_mod+e                        |=  kitty_mod+space>kitty_mod+e launch_tab nvim                │
+	│ kitty_mod+space>kitty_mod+f                        |=  kitty_mod+space>kitty_mod+f launch_tab ranger              │
+	│ kitty_mod+space>kitty_mod+,                        |=  kitty_mod+space>kitty_mod+, launch_tab ranger              │
+	│ kitty_mod+u>kitty_mod+u                            |=  kitty_mod+u>kitty_mod+u open_url_with_hints                │
+	│ kitty_mod+u>kitty_mod+p                            |=  kitty_mod+u>kitty_mod+p kitten hints --type path           │
+	│ kitty_mod+u>kitty_mod+d                            |=  kitty_mod+u>kitty_mod+d show_kitty_doc overview            │
+	│ kitty_mod+g>kitty_mod+e                            |=  kitty_mod+g>kitty_mod+e toggle_marker text 1 ERROR 2 WARNING 3 LOG│
+	│ kitty_mod+g>kitty_mod+a                            |=  kitty_mod+g>kitty_mod+a create_marker                      │
+	│ kitty_mod+g>kitty_mod+u                            |=  kitty_mod+g>kitty_mod+u remove_marker                      │
+	│ kitty_mod+g>kitty_mod+n                            |=  kitty_mod+g>kitty_mod+n scroll_to_mark next                │
+	│ kitty_mod+g>kitty_mod+p                            |=  kitty_mod+g>kitty_mod+p scroll_to_mark prev                │
+	│ kitty_mod+o>kitty_mod+=                            |=  kitty_mod+o>kitty_mod+= change_font_size all +1.0          │
+	│ kitty_mod+o>kitty_mod+-                            |=  kitty_mod+o>kitty_mod+- change_font_size all -1.0          │
+	│ kitty_mod+o>kitty_mod+0                            |=  kitty_mod+o>kitty_mod+0 change_font_size all 10.0          │
+	│ kitty_mod+o>kitty_mod+i                            |=  kitty_mod+o>kitty_mod+i set_background_opacity +0.1        │
+	│ kitty_mod+o>kitty_mod+u                            |=  kitty_mod+o>kitty_mod+u set_background_opacity -0.1        │
+	│ kitty_mod+o>kitty_mod+p                            |=  kitty_mod+o>kitty_mod+p set_background_opacity 0.5         │
+	│                                                                                                                   │
+	┗───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛

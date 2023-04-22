@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Copy user crontab (prevent overwrite)
+crontab -l >crontab_new
+
+# # Append new jobs to old crontab
+my_jobs="$(./sync-cron-jobs)"
+echo "$my_jobs" >>crontab_new
+
+# Remove duplicates, write changes
+crontab_new="$(echo "$crontab_new" | sort -u)"
+crontab crontab_new
+
+# Clear local temp file
+rm crontab_new
+
+echo "Updated cron jobs"
+echo
+echo "New crontab:"
+crontab -l
+
+# vim; ft=sh

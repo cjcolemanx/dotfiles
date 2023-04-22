@@ -1,0 +1,75 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+;; Don't forget to update the systemd service as well
+
+(defcfg
+)
+
+(deflayer qwerty
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @fnk a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           @spc           ralt rmet rctl
+)
+
+(deflayer space-mode
+  _    _    _    _    _    _    _    _    _       _    _    _    _    _
+  _    _    _    _    _    _    _    _    _       _    _    _    _    _
+  _    _    _    _    _    _    _    _    _       _    _    _    _
+  _    _    _    _    _    _    _    _    @leader    _    _    _
+  _    _    _              _              _       _    _
+)
+
+
+(deflayer function-keys
+  _  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  _  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _  _    _    _    _    _    ins  home pgup _    _    _    _
+  _  _    _    _    _    _    del  end  pgdn _    up   _
+  _  _    _              lrld           left down rght
+)
+
+#| Times |#
+(defvar
+  ;; timeouts
+  short   150
+  default 200
+  long    300
+
+  ts $short
+  td $default
+  tl $long
+)
+
+#| key strings |#
+(defseq
+  email   (i e m)
+  nx-conf (n c)
+  pv-conf (p c)
+)
+
+#| autocomplete and macro-ed |#
+(deffakekeys
+  email   (macro c j c o l e m a n x S-2 g m a i l . c o m)
+  nx-conf (macro lrnx) 
+  pv-conf (macro lrpv) 
+)
+
+#| Keys |#
+(defalias 
+  fnk          (tap-hold $ts $ts esc (layer-while-held function-keys))
+
+  ;; Space mode 3==>
+  spc          (tap-hold-press $td $td spc (layer-toggle space-mode))
+  leader       (tap-hold-release $td $tl sldr ,)
+;;  chord-mode   (multi
+;;                  (release-key spc)
+;;                  (layer-switch space-mode-chords)
+;;               )
+)

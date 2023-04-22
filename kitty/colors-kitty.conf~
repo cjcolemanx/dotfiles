@@ -1,0 +1,25 @@
+foreground   #c4c4c5
+background   #15161a
+cursor       #c4c4c5
+
+color0       #15161a
+color8       #4f5053
+color1       #10386f
+color9       #10386f
+color2       #37568c
+color10      #37568c
+color3       #265fa3
+color11      #265fa3
+color4       #644a7b
+color12      #644a7b
+color5       #7a6584
+color13      #7a6584
+color6       #bf8c82
+color14      #bf8c82
+color7       #c4c4c5
+color15      #c4c4c5
+active_tab_foreground #c4c4c5
+active_tab_background #10386f
+inactive_tab_foreground #c4c4c5
+inactive_tab_background #37568c
+tab_bar_background #15161a

@@ -1,0 +1,2 @@
+- [x] Fix `Shade` plugin
+- [x] Move the LuaSnip and LSP keymaps to the 'lua' folder

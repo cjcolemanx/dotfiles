@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+# BSPWM startup script
+
+# ~ Special Variables
+# USE_RANDOM_WALLPAPER=false # TODO: implement
+# which pywal backend to use
+PYWAL_BACKEND=haishoku # values: colorthief, colorz, schemer2, wal
+
+# ~ Kill Processes
+killall -q sxkd
+killall -q picom
+killall -q dunst
+# eww kill
+# killall -q eww
+
+# ~ Setup Background and Theme
+# TODO: add random background
+wal --backend "$PYWAL_BACKEND" -i "$HOME/.config/wallpapers/04JB33m.jpg"
+
+# autostart
+#pgrep -x sxhkd > /dev/null || sxhd &
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
+picom -c --config "$HOME/.config/picom/picom.conf" &
+bash ~/.config/polybar/launch.sh --grayblocks &
+clipmenud &
+dunst &
+
+# nitrogen --restore &
+# eww open sidebar &
+# kmonad ~/.config/kmonad/base.kbd &
+
+# MPD start if no instance exists
+[ ! -s ~/.config/mpd/pid ] && mpd &
+
+# Get rid of cursor >:(
+unclutter --start-hidden --timeout 1 &
+
+# Mouse
+# bspc config pointer_action1 move
+# bspc config pointer_action2 resize_side
+# bspc config pointer_action3 resize_corner
+
+# workspaces - 5 screens
+bspc monitor HDMI-A-0 -d 1 2 3 4 5
+bspc monitor HDMI-A-1 -d 6 7 8 9 10
+
+# other inputs
+#bspc monitor DisplayPort-0 -d 1 2 3 4 5
+#bspc monitor DisplayPort-1 -d 1 2 3 4 5
+
+### Other Stuff
+bspc config border_width 3
+bspc config window_gap 12
+bspc config split_ratio 0.65
+
+# Eww Sidebar on monitor 1
+# bspc config -m HDMI-A-0 left_monocle_padding 40
+# bspc config -m HDMI-A-0 left_padding 64
+
+. "${HOME}/.cache/wal/colors.sh"
+
+bspc config normal_border_color "$color15"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color2"
+bspc config presel_feedback_color "$color1"
+bspc config urgent_border_color "$color3"
+
+# bspc config normal_border_color "#4c566a"
+# bspc config active_border_color "#1e1e1e"
+# bspc config focused_border_color "#327bd1"
+# bspc config presel_feedback_color "#125ba1"
+# bspc config urgent_border_color "#dd2727"
+
+bspc config single_monocle false
+bspc config presel_feedback true
+
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+bspc config pointer_follows_monitor true
+
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config swallow_first_click true
+
+# check scratchpad already running
+# bspc rule -a scratchpad sticky=on state=floating hidden=on
+# [ "$(ps -x | grep -c 'scratchpad')" -eq "1" ] && st -c scratchpad -e ~/.config/bspwm/scratch &
+
+### Rules
+bspc rule -a bspwm_hidden_window sticky=off state=hidden rectangle=800x400+1600+150
+bspc rule -a Zathura state=tiled
+bspc rule -a scpad sticky=on state=floating rectangle=800x400+1600+150
+bspc rule -a binddoc sticky=on state=floating rectangle=1600x500+100+50
+bspc rule -a mpdplayer sticky=on state=floating rectangle=1200x600+1300+800
+bspc rule -a pavucontrol sticky=off state=floating rectangle=600x300+50+100
+bspc rule -a dunstify manage=off
+bspc rule -a generic_floating_winow sticky=off state=floating rectangle=800x500+1300+200
+
+# Alert
+sleep 0.5
+# notify-send "Bspwm Loaded"
+dunstify -a "BSPWM" "BSPWM Loaded"
+
+# Generate other configs
+sleep 0.5
+. "${BSPWM_SCRIPTS}/post-pywal-setup.sh"

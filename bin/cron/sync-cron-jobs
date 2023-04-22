@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+MY_JOBS=(
+	"@daily $HOME/bin/cron/log-package-updates.sh"      # log the number of packages to a temp file every day
+	"@weekly $HOME/bin/cron/create-timeshift-backup.sh" # Create a weekly backup
+	# "@weekly $HOME/bin/cron/create-timeshift-backup.sh" # Remove old backups
+)
+
+for i in "${MY_JOBS[@]}"; do
+	echo "$i" # goes to a local file that gets written to crontab
+done
+
+# vim; ft=sh

@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Wraps mpc, but with my custom functionality *smirks and inflates you*
+#
+# I'm not gonna write a bunch here, so check MPD_SCRIPT for
+# actual implementation
+MPD_SCRIPT="$HOME/bin/mpd/change_mpd_state.sh"
+
+case "$1" in
+repeat | loop) "$MPD_SCRIPT" repeat ;;
+album+ | albumn) "$MPD_SCRIPT" next_album ;;
+album- | albump) "$MPD_SCRIPT" prev_album ;;
+seek+ | seekn) "$MPD_SCRIPT" seek_forward ;;
+seek- | seekp) "$MPD_SCRIPT" seek_backward ;;
+vol+ | volu) "$MPD_SCRIPT" up ;;
+vol- | vold) "$MPD_SCRIPT" down ;;
+rate+ | rateu) "$MPD_SCRIPT" rate_up ;;
+rate- | rated) "$MPD_SCRIPT" rate_down ;;
+pp) "$MPD_SCRIPT" toggle_play ;;
+r[1-5]) "$MPD_SCRIPT" rate "$@" ;;
+q | query) "$MPD_SCRIPT" ;;
+?)
+	echo "Wrapper Usage:"
+	echo "repeat / loop     - repeat current playlist"
+	echo
+	echo "album- / albump   - album {next,prev}"
+	echo "album+ / albumn"
+	echo
+	echo "seek- / seekp     - seek 5s {forward,back}"
+	echo "seek+ / seekn"
+	echo
+	echo "vol- / volp       - {increase,decrease} volume by 5%"
+	echo "vol+ / voln"
+	echo
+	echo "rate- / ratep     - {increase,decrease} rating by 1 star"
+	echo "rate+ / raten"
+	echo
+	echo "pp                - toggle playpause"
+	echo
+	echo "q / query         - get current track info"
+	echo
+	echo "r1 .. r5          - rate track 1..5 stars"
+	echo
+	echo
+	echo "Other commands are passed to the regular old mpc cli"
+	;;
+*) mpc "$@" ;;
+esac
+
+# vim; ft=sh

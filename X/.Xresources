@@ -1,0 +1,11 @@
+URxvt.font: xft:JetBrains Mono Nerd Font:style=Regular:size=10
+URxvt.boldFont: xft:JetBrains Mono Nerd Font:style=Regular:size=10
+URxvt.italicFont: xft:JetBrains Mono Nerd Font:style=Regular:size=10
+URxvt.boldItalicfont: xft:JetBrains Mono Nerd Font:style=Regular:size=10
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true

@@ -1,0 +1,7 @@
+qbittorrent-api
+pywal
+calc
+--user haishoku
+--user colorthief
+--user colorz
+--user schemer2

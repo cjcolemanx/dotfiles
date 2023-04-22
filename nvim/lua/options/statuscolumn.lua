@@ -1,0 +1,15 @@
+-- local M = {}
+--
+-- local function git_status()
+--   return vim.fn.sign_getplaced(
+--     vim.api.nvim_get_current_buf(),
+--     {
+--       group = "gitsigns_vimfn_signs_",
+--       lnum = vim.v.lnum
+--     }
+--   )[1].signs[1]
+-- end
+--
+-- M.signs = git_status
+--
+-- return M

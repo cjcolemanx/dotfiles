@@ -1,0 +1,186 @@
+###########################
+### ~~ Shell Aliases ~~ ###
+###########################
+# Avoid these!:
+# 'w' (show logged in users' activity)
+# 'X' (X Window System server)
+# 'R' (R programming language interpreter)
+# '[' (similar to 'test')
+
+### => File Navigation
+### 4 and 5 are not all that useful, but ya know
+alias   ..='cd ../'
+alias  ...='cd ../../'
+alias ....='cd ../../../'
+alias   .4='cd ../../../../'
+alias   .5='cd ../../../../../;'
+
+alias      ranger-home='ranger $HOME'
+alias         ranger-a='ranger /mnt/A'
+alias  ranger-projects='ranger $HOME/Projects'
+alias     ranger-repos='ranger $HOME/Repos'
+alias   ranger-scripts='ranger $HOME/.scripts'
+alias ranger-downloads='ranger $HOME/Downloads'
+alias   ranger-myrepos='ranger $HOME/Repos/github.com/cjcolemanx'
+alias   ranger-configs='ranger $HOME/.config'
+
+### => Shorthand / Safety Nets
+alias  grep='grep --color=auto'
+alias    ls='command ls -AC   --group-directories-first --color=auto'
+alias     l='command ls -AF   --color=auto'
+alias lsize='command ls -AFsh --color=auto'
+alias  list='command ls -Al   --color=auto' # same as above, but different format
+alias lista='command ls -Al   --color=auto' # same as above, but different format
+alias    la='command ls -Al   --color=auto --group-directories-first'
+alias  wget='wget -c' # continue
+alias    rm='rm -I' # Safety
+alias   rmf='rm -If' # Force
+alias    rd='rm -Ir' # Directory
+alias    md='mkdir -p'
+alias     g='git'
+
+# Colorize Grep
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+# NOTE: new, not complete
+# Show a directories contents (quickly)
+# alias checkdir='list $1'
+# Other Utility
+alias   now='date +"%T"'
+alias today='date +"%d-%m-%Y"'
+alias     h='history'
+alias     j='jobs -l'
+
+### => Permissions Handling
+### Type faster to trick your brain into thinking you're more productive
+alias   chmod+r='chmod +r'
+alias   chmod+w='chmod +w'
+alias   chmod+x='chmod +x'
+alias  chmod+rw='chmod +rw'
+alias  chmod+rx='chmod +rx'
+alias  chmod+wx='chmod +wx'
+alias chmod+rwx='chmod +rwx'
+
+### => Useful User Scripts
+alias touchNested='bash ~/.scripts/files/touchNested.sh'
+alias bkp-configs='bash ~/.scripts/maintenance/bkp_configs.sh'
+# FIXME: Not working! It's a broken rofi script
+# alias man='bash ~/.scripts/utility/man_search.sh'
+
+### => Confirmation
+### Stop breaking things : )
+# alias cp='cp -i'
+alias ln='ln -i'
+alias mv='mv -i'
+
+### => Quick Config
+### Faster dotfile editing
+alias   dotfiles='git --git-dir=/home/charles/.config --work-tree=/'
+alias    sxhkdrc='nvim -c ":cd $HOME/.config/sxhkd"        $HOME/.config/sxhkd/sxhkdrc.bspwm'
+alias    aliasrc='nvim -c ":cd $HOME/.config/shell"        $HOME/.config/shell/.aliases'
+alias    bspwmrc='nvim -c ":cd $HOME/.config/bspwm"        $HOME/.config/bspwm/bspwmrc'
+alias       i3rc='nvim -c ":cd $HOME/.config/i3"           $HOME/.config/i3/config'
+alias    i3barrc='nvim -c ":cd $HOME/.config/i3blocks"     $HOME/.config/i3blocks/i3blocks.conf'
+alias    kittyrc='nvim -c ":cd $HOME/.config/kitty"        $HOME/.config/kitty/kitty.conf'
+alias     nvimrc='nvim -c ":cd $HOME/.config/nvim"         $HOME/.config/nvim/init.lua'
+alias     rofirc='nvim -c ":cd $HOME/.config/rofi"         $HOME/.config/rofi/config.rasi'
+alias      ewwrc='nvim -c ":cd $HOME/.config/eww"          $HOME/.config/eww/eww.yuck'
+alias  polybarrc='nvim -c ":cd $HOME/.config/polybar"      $HOME/.config/polybar/grayblocks/config.ini'
+alias  ncmpcpprc='nvim -c ":cd $HOME/.config/ncmpcpp"      $HOME/.config/ncmpcpp/config'
+alias    shellrc='nvim -c ":cd $HOME/.config/shell"        $HOME/.config/shell/todo.md'
+alias      zshrc='nvim -c ":cd $HOME/.config/zsh"          $HOME/.config/zsh/todo.md'
+alias     bashrc='nvim -c ":cd $HOME/.config/bash"         $HOME/.config/bash/todo.md'
+alias  neomuttrc='nvim -c ":cd $HOME/.config/neomutt"      $HOME/.config/neomutt/neomuttrc'
+alias  ohmyzshrc='nvim -c ":cd $HOME/.config/.oh-my-zsh"   $HOME/.config/.oh-my-zsh/oh-my-zsh.sh'
+alias      fehrc='nvim -c ":cd $HOME/.config/feh"          $HOME/.config/feh/keys'
+alias   docbinds='nvim -c ":cd $HOME/.config/bin"          $HOME/bin/keybinds.sh'
+alias      sshrc='nvim -c ":cd $HOME/.config/.ssh"         $HOME/.ssh/config'
+alias     tmuxrc='nvim -c ":cd $HOME/.config/tmux"         $HOME/.config/tmux/tmux.conf'
+alias   kanatarc='nvim -c ":cd $HOME/.config/kanata"       $HOME/.config/kanata/layer0.kbd'
+alias  systemdrc='nvim -c ":cd $HOME/.config/systemd/user" $HOME/.config/systemd/user'
+alias starshiprc='nvim -c ":cd $HOME/.config/starship"     $HOME/.config/starship/starship.toml'
+alias newsboatrc='nvim -c ":cd $HOME/.config/newsboat"     $HOME/.config/newsboat/config'
+alias      mpvrc='nvim -c ":cd $HOME/.config/mpv"          $HOME/.config/mpv/mpv.conf'
+alias  zathurarc='nvim -c ":cd $HOME/.config/zathura"      $HOME/.config/zathura/zathurarc'
+
+alias docpackage='$HOME/bin/doc_package.sh'
+
+### => Quick bind checking
+alias kittybinds='bat $HOME/.config/kitty/keymap.txt'
+alias sxhkdbinds='bat $HOME/.config/sxhkd/keymap.txt'
+
+### => Note-Taking
+alias journal="ranger /mnt/A/notes/personal" # Personal Notes
+alias   notes="ranger /mnt/A/notes" # Technical Notes
+
+
+### => Use Defaults
+### Not always a good idea, but these are pretty much never gonna change
+###   on this machine.
+alias  sxhkd='sxhkd -c ~/.config/sxhkd/sxhkdrc' # Key bindings
+alias   code='codium' # No VSCode pls
+alias    eww='~/Repos/github.com/elkowar/eww/target/release/eww' # 
+alias   mutt='neomutt'
+
+### => Switch Shells
+### I only ever use ZSH now so idk...
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias  tozsh="sudo chsh $USER -s /usr/bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /usr/bin/fish && echo 'Now log out.'"
+
+# Helpers
+alias whichshells='cat /etc/shells' # List Available Shells
+alias   whatshell='ps -p $$'        # List Current Shell
+
+# kitty kittens
+alias icat="kitty +kitten icat --align=left" # Image-in-terminal Kitty
+
+# programs
+alias discord="kitty --detach -T Discord --class bspwm_hidden_window discord"
+alias ncmp="ncmpcpp" # Hard to type lmao
+
+
+### => Window Manager Stuff
+### Use to identify programs for bspwm
+alias pavucontrol='pavucontrol --class pavucontrol' # Always Launch with this class
+
+alias miniplayer='miniplayer'
+alias kanata='command kanata --cfg "$HOME/.config/kanata/layer0.kbd"'
+
+alias vim="$EDITOR"
+alias vi="$EDITOR"
+
+# NOTE: old and useless for the Newman, 
+# but super useful to keep around for other keyboards
+alias fixmykeys='sudo kbct remap --config ~/.config/kbct.yaml &'
+
+### => Arch aliases
+alias pacman='sudo pacman' # Skip a key press
+alias pacsyu='sudo pacman -Syu' # update standard plugins
+alias pacsyyu='sudo pacman -Syyu' # refresh pkglist and update standard
+alias yaysua='yay -Sua --noconfirm' # update AUR pkgs (yay)
+alias yaysyu='yay -Syu --noconfirm' # update standard and AUR pkgs (yay)
+# alias parsua='paru -Sua --noconfirm' # update AUR pkgs (paru)
+# alias parsyu='paru -Syu --noconfirm' # update standard AUR pkgs (paru)
+# alias unlock='sudo rm /var/lib/pacman/db.lck' # remove pacman lock
+# alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+
+### ==> Change defaults
+alias    b='bat'
+alias    n="urxvt -e nnn"
+alias mutt="neomutt"
+
+### ==> My Script Aliases
+alias        bk='bookmark'
+alias  markhere='$HOME/bin/make-time-travel-dir.sh'
+alias   dirtset='source $HOME/bin/dir-travel.sh set'
+alias dirtwhere='source $HOME/bin/dir-travel.sh where'
+alias      dirt='source $HOME/bin/dir-travel.sh travel'
+
+# Priveleged access
+if (( UID != 0 )); then
+  alias sudo='sudo '
+  alias scat='sudo cat'
+  alias svim='sudoeit'
+fi
+# vim; ft=sh

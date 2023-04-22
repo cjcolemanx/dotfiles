@@ -1,0 +1,6 @@
+.gitignore~
+bashtop/error.log
+shell/.env
+qutebrowser/__pycache__
+qutebrowser/bookmarks
+qutebrowser/quickmarks

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+ln -s "$HOME/.archey3.cfg" "$HOME/.config/archey3/.archey3.cfg"
+ln -s "$HOME/.bashrc" "$HOME/.config/bash/.bashrc"
+ln -s "$HOME/.bash_profile" "$HOME/.config/bash/.bash_profile"
+ln -s "$HOME/.oh-my-zsh" "$HOME/.config/.oh-my-zsh"
+ln -s "$HOME/.profile" "$HOME/.config/shell/.profile"
+ln -s "$HOME/.tmux.conf" "$HOME/.config/tmux/tmux.conf"
+ln -s "$HOME/.tmux" "$HOME/.config/tmux"
+ln -s "$HOME/.Xresources" "$HOME/.config/X/.Xresources"
+ln -s "$HOME/.zshrc" "$HOME/.config/zsh/.zshrc"
+ln -s "$HOME/bin" "$HOME/.config/bin"
+ln -s "$HOME/xinitrc" "$HOME/.config/.xinitrc"

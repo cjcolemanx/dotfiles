@@ -1,0 +1,40 @@
+## Use `cyrus-sasl` (from Arch extras repo) and `pass` (from Arch community) for GMail
+source ~/.config/neomutt/binds
+source ~/.config/neomutt/credentials
+source ~/.config/neomutt/options
+source ~/.config/neomutt/sidebar
+source ~/.config/neomutt/variables
+
+# Auth
+set smtp_authenticators = 'gssapi:login'
+set imap_pass="`pass show apps/neomutt/google`"
+set smtp_pass="`pass show apps/neomutt/google`"
+
+# Ensure TLS is enforced
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# First
+set folder=imaps://cjcolemanx@imap.gmail.com/
+
+# Unfiltered messages go here
+set spoolfile = "+INBOX"
+
+# Self Explanatory
+set postponed = "+Drafts"
+set record = "+Sent Mail"
+set trash = "+Trash"
+
+mailboxes =Important =Starred =Drafts ="Sent Mail" =Spam =Trash
+
+# Store message headers for speed
+set header_cache = "$HOME/.cache/mutt/headers"
+# Store messages locally (same folder)
+set message_cachedir = "$HOME/.cache/mutt/bodies"
+# Store certificates
+set certificate_file = "$HOME/.cache/mutt/certificates"
+
+set mailcap_path="$HOME/.config/neomutt/mailcap"
+bind attach <retrun> view-mailcap
+macro attach s '<save-entry> <bol>~/Documents/Attachments/<eol>' 'save attachment'
+auto_view text/html

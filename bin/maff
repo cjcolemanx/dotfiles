@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#
+# `bc` wrapper cuz h8 math >:(
+echo "$@" | bc

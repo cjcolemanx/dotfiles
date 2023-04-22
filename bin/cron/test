@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+erm="$(./sync-cronjobs)"
+echo "$erm"

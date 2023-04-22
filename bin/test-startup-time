@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+TEST_SHELL="$1"
+
+case "$TEST_SHELL" in
+zsh) time zsh -c exit &>/dev/null ;;
+*) echo "Shell not tested (Probably a TODO)" ;;
+esac

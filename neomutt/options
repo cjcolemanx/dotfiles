@@ -1,0 +1,33 @@
+set editor=`echo \$EDITOR`
+set pager_index_lines = 10
+set pager_context = 3           # 3 lines of context
+set pager_stop                  # stop at end of message
+set menu_scroll                 # stop at end of message
+set tilde                       # ~ pads mutt
+set move=no                     # don't move read messages
+set mail_check = 120            # New mail checks interval (sec)
+set imap_keepalive = 300        # Keep connection by polling every 5 minutes (300 / 60)
+
+unset imap_passive              # Open new IMAP connections automatically
+
+# optional for gmail: stops doubly-recording sent emails (gmail does this already, but poorly)
+# unset record
+
+set charset = "utf-8"
+set uncollapse_jump
+set sort_re
+set sort = reverse-threads
+set sort_aux = last-date-received
+
+
+# Spell-Checking
+set ispell="ispell"
+
+# Precedes messages included in a reply
+set attribution="0n %d, %n said:"
+
+set tmpdir=/tmp
+
+set alias_file = "$HOME/.config/neomutt/aliases"
+
+set signature = "$HOME/.config/neomutt/signature"
