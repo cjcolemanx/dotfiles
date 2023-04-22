@@ -44,7 +44,7 @@ declare -a DOTFILES=(
 	# "nitrogen"
 	# "nnn"
 	"nvim"
-	# "picom"
+	"picom"
 	"polybar"
 	"ranger"
 	"rofi"
