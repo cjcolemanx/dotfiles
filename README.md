@@ -6,16 +6,27 @@
 > change
 
 **OS**: Arch Linux
+
 **Window Manager**: BSPWM + SXHKD (hotkeys)
+
 **Bar**: Polybar
+
 **Launcher and Menus**: Rofi
+
 **Media**: mpc + mpd + ncmpcpp (music) and mpv + vlc (video)
+
 **Shell**: zsh
+
 **Terminal**: Kitty
+
 **Browser**: Brave + qutebrowser
+
 **Editor**: Neovim
+
 **Email and RSS**: NeoMutt + Newsboat
+
 **Notifications**: Dunst
+
 **Screenshots**: Flameshot
 
 I have a lot of scripts in the `bin` folder.
@@ -33,7 +44,7 @@ Some notable ones:
 
 ## Installation
 
-<!--  TODO: -->
+TODO
 
 ## Half-finished
 
