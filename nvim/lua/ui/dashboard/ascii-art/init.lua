@@ -6,6 +6,7 @@ local games = require("ui.dashboard.ascii-art.games").images
 local logos = require("ui.dashboard.ascii-art.logos").images
 local planets = require("ui.dashboard.ascii-art.planets").images
 local objects = require("ui.dashboard.ascii-art.objects").images
+local os_ascii = require("ui.dashboard.ascii-art.os").images
 
 -- NOTE: not using atm
 -- local cats = require("ui.dashboard.ascii-art.cats").images
@@ -31,6 +32,7 @@ ascii_table_builder(image_list, characters)
 -- ascii_table_builder(image_list, cats)
 -- ascii_table_builder(image_list, dogs)
 -- ascii_table_builder(image_list, other_animals)
+ascii_table_builder(image_list, os_ascii)
 
 -- Add Logos
 ascii_table_builder(logo_list, logos)
@@ -41,7 +43,7 @@ M.text = {
   "Buy a real sword",
   "Drain",
   "Present Day... Present Time!",
-  '"What game is this?"',
+  '"What game is *this*?"',
   "You are entering the legandary Gamer Zone",
   "Kvlt Shvt",
   "Fast Beats to Fuck To",
