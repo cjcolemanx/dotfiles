@@ -30,12 +30,13 @@
 	│ 25: Rotate Nodes (cyclical)                           |= super + {_, shift + } r                                     │
 	│ 26: Rotate Nodes (flip)                               |= super + {_, shift + } e                                     │
 	│ 27: Smart Resize                                      |= super + ctrl + {r,e}                                        │
-	│ 28: Smart Resize Bigger                               |= super + {equal,bracketleft,bracketright,minus}              │
-	│ 29: Util - reset vertical padding                     |= super + alt + {equal,bracketleft,bracketright,minus}        │
-	│ 30: Change window gap                                 |= super + alt + 0                                             │
-	│ 31: Change split ratios                               |= super + ctrl + {minus,equal}                                │
-	│ 32: Move Floating Window                              |= super + ctrl + {1-9}                                        │
-	│ 33: Move Floating Window Faster                       |= super + ctrl + {h,j,k,l}                                    │
+	│ 28: Smart Resize 2                                    |= super + {minus,bracketleft,bracketright,equal}              │
+	│ 29: Smart Resize Bigger                               |= super + shift + {minus,bracketleft,bracketright,equal}      │
+	│ 30: Util - reset vertical padding                     |= super + alt + {minus,bracketleft,bracketright,equal}        │
+	│ 31: Change window gap                                 |= super + alt + 0                                             │
+	│ 32: Change split ratios                               |= super + ctrl + {minus,equal}                                │
+	│ 33: Move Floating Window                              |= super + ctrl + {1-9}                                        │
+	│ 34: Move Floating Window Faster                       |= super + ctrl + {h,j,k,l}                                    │
 	│                                                                                                                      │
   ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
 
@@ -72,9 +73,9 @@
  ┗───────────────────┛───────────────────────────────────────────────────────────────────────────────────────────────────┓
 	│                                                                                                                      │
 	│  0: Terminal                                          |= super + {_, shift, ctrl} + Return                           │
-	│  1: Browser                                           |= super + space; super + b                                    │
-	│  2: [M]PD                                             |= super + space; super + {m}                                  │
-	│  3: [V]olume                                          |= super + space; super + {v}                                  │
+	│  1: Browser                                           |= super + space; super + {b,w}                                │
+	│  2: Helper : )                                        |= super + space; super + slash                                │
+	│  3: [M]PD                                             |= super + space; super + {m}                                  │
 	│  4: [S]creenshot                                      |= super + space; super + {s}                                  │
 	│  5: [L]inks                                           |= super + space; super + {l}                                  │
 	│  6: [F]iles - GUI (Dolphin)                           |= super + space; super + {f}                                  │
@@ -83,6 +84,11 @@
 	│  9: [R]estarter (processes)                           |= super + space; super + {r}                                  │
 	│ 10: [O]pen Application                                |= super + o                                                   │
 	│ 11: Scratchpad                                        |= super + grave                                               │
+	│ 12: Newsboat                                          |= super + space; n; e; w; s                                   │
+	│ 13: Neomutt                                           |= super + space; m; a; i; l                                   │
+	│ 14: NCMPCPP (duplicate, but just cuz)                 |= super + space; m; p; c;                                     │
+	│ 15: Process Monitor                                   |= super + space; p; r; o; c                                   │
+	│ 16: Files                                             |= super + space; f; i; l; e; s                                │
 	│                                                                                                                      │
   ┗──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┛
 
@@ -102,7 +108,7 @@
 ~|     Other     |~
  ┗───────────────┛───────────────────────────────────────────────────────────────────────────────────────────────────────┓
 	│                                                                                                                      │
-	│  0: [C]lipmenu                                        |= alt + ctrl + {c}                                            │
+	│  0: [C]lipmenu                                        |= alt + ctrl + c                                              │
 	│  1: Windows-like alt-tabbing                          |= alt + Tab                                                   │
 	│  2: Lower/Raise Brightness                            |= super + alt + b; super + alt + {j,k}                        │
 	│  3: Increase/Decrease Gamma                           |= super + alt + b; super + alt + {u,i}                        │

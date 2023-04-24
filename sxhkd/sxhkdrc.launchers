@@ -26,19 +26,24 @@
 
 # Terminal
 super + {_, shift, ctrl} + Return 
-	{$TERMINAL, alacritty, uxvrt}
+	exec {$TERMINAL, alacritty, uxvrt}
 
 # Browser
-super + space; super + b
-  $BROWSER
+super + space; super + {b,w}
+  exec {$BROWSER, firefox}
+
+# Helper : )
+super + space; super + slash
+	$HOME/bin/rofi/keybind-helper.sh
 
 # [M]PD
 super + space; super + {m}
-  bash  { ~/.config/rofi/applets/bin/mpd.sh &}
+  $HOME/bin/rofi/rofi-mpcc.sh
+## bash  { ~/.config/rofi/applets/bin/mpd.sh &}
 
-# [V]olume
-super + space; super + {v}
-  bash  { ~/.config/rofi/applets/bin/volume.sh &}
+## [V]olume
+## super + space; super + {v}
+##   bash  { ~/.config/rofi/applets/bin/volume.sh &}
 
 # [S]creenshot
 super + space; super + {s}
@@ -58,7 +63,7 @@ super + space; super + {f}
 
 # Scripts
 super + space; super + {y}
-  bash  {~/.config/rofi/scripts/my-scripts/shell_scripts.sh &}
+  $HOME/bin/rofi/run-shell.sh
 
 # [T]orrents
 super + space; super + {t}
@@ -66,14 +71,35 @@ super + space; super + {t}
 
 # [R]estarter (processes)
 super + space; super + {r}
-  bash  {~/.config/rofi/scripts/my-scripts/master_restarter.sh &}
+  $HOME/bin/rofi/daemon-restart.sh
 
 # [O]pen Application
 super + o
-  bash ~/.config/polybar/grayblocks/scripts/launcher.sh &
+  $HOME/bin/rofi/launch-apps.sh
 
 # Scratchpad
 super + grave 
 	$HOME/bin/sxhkd/scratchpad.sh
+
+# Newsboat
+super + space; n; e; w; s
+  $HOME/bin/sxhkd/generic_popup_window.sh "newsboat" "Newsboat"
+
+# Neomutt
+super + space; m; a; i; l
+  $HOME/bin/sxhkd/generic_popup_window.sh "neomutt" "NeoMutt"
+
+# NCMPCPP (duplicate, but just cuz)
+super + space; m; p; c;
+  $HOME/bin/sxhkd/generic_popup_window.sh "npmcpp" "MPD Playlist"
+
+# Process Monitor
+super + space; p; r; o; c
+  $HOME/bin/sxhkd/generic_popup_window.sh "bashtop" "Bashtop"
+
+# Files
+super + space; f; i; l; e; s
+  $HOME/bin/sxhkd/generic_popup_window.sh "ranger" "Ranger"
+## $HOME/bin/sxhkd/generic_popup_window.sh "nnn" "NNN"
 
 ## vim: ft=sxhkd

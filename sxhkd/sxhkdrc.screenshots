@@ -9,20 +9,24 @@
 
 # Focused Desktop (save and clip)
 super + ctrl + shift + s
-	$HOME/bin/sxhkd/screenshot.sh 'screen'
+	$HOME/bin/screenshot 'screen'
+## $HOME/bin/sxhkd/screenshot.sh 'screen'
 
 # All Desktops (save and clip)
 super + ctrl + shift + p
-	$HOME/bin/sxhkd/screenshot.sh 'full'
+	$HOME/bin/screenshot 'full'
+## $HOME/bin/sxhkd/screenshot.sh 'full'
 
 # NOTE: unfocuses window
 # Snipping (save and clip) #1 
 super + ctrl + s
-	$HOME/bin/sxhkd/screenshot.sh 'gui'
+	$HOME/bin/screenshot 'gui'
+## $HOME/bin/sxhkd/screenshot.sh 'gui'
 
 # NOTE: unfocuses window
 # Snipping (save and clip) #2
 Print
-	$HOME/bin/sxhkd/screenshot.sh 'gui'
+	$HOME/bin/screenshot 'gui'
+## $HOME/bin/sxhkd/screenshot.sh 'gui'
 
 ## vim: ft=sxhkd

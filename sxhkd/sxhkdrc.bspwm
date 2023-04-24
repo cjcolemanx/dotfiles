@@ -136,7 +136,7 @@ super + ctrl + {r,e}
 ##bspc node -m {next,prev} -f
 
 # Smart Resize
-super + {equal,bracketleft,bracketright,minus}
+super + {minus,bracketleft,bracketright,equal}
   n=20; \
   { d1=left;   d2=right;  dx=-$n; dy=0;   \
   , d1=bottom; d2=top;    dx=0;   dy=$n;  \
@@ -145,8 +145,18 @@ super + {equal,bracketleft,bracketright,minus}
   } \
   bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
 
+# Smart Resize 2
+super + shift + {minus,bracketleft,bracketright,equal}
+  n=20; \
+  { d1=right;  d2=left;   dx=-$n; dy=0;   \
+  , d1=top;    d2=bottom; dx=0;   dy=$n;  \
+  , d1=bottom; d2=top;    dx=0;   dy=-$n; \
+  , d1=left;   d2=right;  dx=$n;  dy=0;   \
+  } \
+  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+
 # Smart Resize Bigger
-super + alt + {equal,bracketleft,bracketright,minus}
+super + alt + {minus,bracketleft,bracketright,equal}
   n=60; \
   { d1=left;   d2=right;  dx=-$n; dy=0;   \
   , d1=bottom; d2=top;    dx=0;   dy=$n;  \

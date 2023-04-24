@@ -1,39 +1,41 @@
 #!/usr/bin/env bash
+#
 # BSPWM startup script
 
-# ~ Special Variables
+. "$HOME/bin/startup.sh"
+
 # USE_RANDOM_WALLPAPER=false # TODO: implement
+
 # which pywal backend to use
-PYWAL_BACKEND=haishoku # values: colorthief, colorz, schemer2, wal
+# PYWAL_BACKEND=haishoku # values: colorthief, colorz, schemer2, wal
 
 # ~ Kill Processes
-killall -q sxkd
-killall -q picom
-killall -q dunst
-# eww kill
-# killall -q eww
+# killall -q sxkd
+# killall -q picom
+# killall -q dunst
 
-# ~ Setup Background and Theme
+# Setup Background and Theme
 # TODO: add random background
-wal --backend "$PYWAL_BACKEND" -i "$HOME/.config/wallpapers/04JB33m.jpg"
+# wal --backend "$PYWAL_BACKEND" -i "$HOME/.config/wallpapers/04JB33m.jpg"
 
 # autostart
 #pgrep -x sxhkd > /dev/null || sxhd &
-sxhkd -c ~/.config/sxhkd/sxhkdrc &
-picom -c --config "$HOME/.config/picom/picom.conf" &
-bash ~/.config/polybar/launch.sh --grayblocks &
-clipmenud &
-dunst &
+# sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
+# picom -c --config "$HOME/.config/picom/picom.conf" &
+# polybar -c "$HOME/.config/polybar/config.ini" main &
+# polybar -c "$HOME/.config/polybar/config.ini" main2 &
+# clipmenud &
+# dunst &
 
 # nitrogen --restore &
 # eww open sidebar &
 # kmonad ~/.config/kmonad/base.kbd &
 
 # MPD start if no instance exists
-[ ! -s ~/.config/mpd/pid ] && mpd &
+# [ ! -s ~/.config/mpd/pid ] && mpd &
 
 # Get rid of cursor >:(
-unclutter --start-hidden --timeout 1 &
+# unclutter --start-hidden --timeout 1 &
 
 # Mouse
 # bspc config pointer_action1 move
@@ -57,7 +59,7 @@ bspc config split_ratio 0.65
 # bspc config -m HDMI-A-0 left_monocle_padding 40
 # bspc config -m HDMI-A-0 left_padding 64
 
-. "${HOME}/.cache/wal/colors.sh"
+. "$HOME/.cache/wal/colors.sh"
 
 bspc config normal_border_color "$color15"
 bspc config active_border_color "$color2"
@@ -105,4 +107,4 @@ dunstify -a "BSPWM" "BSPWM Loaded"
 
 # Generate other configs
 sleep 0.5
-. "${BSPWM_SCRIPTS}/post-pywal-setup.sh"
+# . "${BSPWM_SCRIPTS}/post-pywal-setup.sh"
