@@ -116,5 +116,11 @@ esac
 # dunstify "Now Playing" "$format" -i "$preview_name" -h string:x-dunst-stack-tag:debug-mpd
 
 # Send it
-dunstify "$notification_title $passed_info $song_volume" "\n$line_break\n$song $append_info\n\n\t$rating_stars\n$line_break\n$song_next" -h string:x-dunst-stack-tag:music-change -h "int:value:$song_progress" -a "MPC" -i "$preview_name" -t 3000
+dunstify "$notification_title $passed_info $song_volume" \
+	"\n$line_break\n$song $append_info\n\n\t$rating_stars\n$line_break\n$song_next" \
+	-h string:x-dunst-stack-tag:music-change \
+	-h "int:value:$song_progress" \
+	-a "MPC" \
+	-i "$preview_name" \ 
+-t 3000
 # dunstify "$notification_title $song_volume" "\t$rating_stars\n$line_break\n$song $append_info\n\n$song_next" -h string:x-dunst-stack-tag:music-change -h "int:value:$song_progress" -a "MPC" -i "$preview_name" -t 3000

@@ -201,6 +201,10 @@ prev_album)
 	mpc play "$i"
 	sign="$previous_sign"
 	;;
+getalbum)
+	# TODO:
+	sign=" "
+	;;
 *)
 	sign=" "
 	;;

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+DO_CMD="$1"
+DISCORD_SH="$HOME/bin/discord.sh"
+# DUNST_TAG="string:x-dunst-stack-tag:autodiscord"
+# DUNST_NAME="Auto Dcord"
+
+case $DO_CMD in
+last-sreenshot | most-recent-shot | mr-scrot)
+	# Grab screenshot
+	file="$SCREENSHOT_DIR/$("$HOME/bin/utility/get-most-recent-screenshot.sh")"
+	wait -n
+
+	message="$(. "$HOME/bin/rofi/rofi-simple-text-pipe.sh" "Discord Message:")"
+	wait -n
+
+	. "$DISCORD_SH" \
+		--webhook-url="$DISCORD_WEBHOOK" \
+		--text "$message" \
+		--file "$file"
+	;;
+send | send-msg)
+	message="$(. "$HOME/bin/rofi/rofi-simple-text-pipe.sh" "Discord Message:")"
+	wait -n
+
+	. "$DISCORD_SH" \
+		--webhook-url="$DISCORD_WEBHOOK" \
+		--text "$message"
+	;;
+esac
+
+# vim:ft=sh

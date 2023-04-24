@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+if [[ "$1" == "" ]]; then
+	flameshot gui --clipboard --path "$SCREENSHOT_DIR"
+fi
+
+TYPE="$1"
+MAKE_SILENT="$2"
+FOLLOW_UP_CMD="$3"
+
+in_clipboard=False
+
+case "$1" in
+screen)
+	flameshot screen --clipboard --path "$SCREENSHOT_DIR"
+	TYPE="Monitor"
+
+	in_clipboard=True
+	;;
+full)
+	flameshot full --clipboard --path "$SCREENSHOT_DIR"
+	TYPE="Desktop"
+
+	in_clipboard=True
+	;;
+gui)
+	flameshot gui --clipboard --path "$SCREENSHOT_DIR"
+	TYPE="Snipped"
+
+	in_clipboard=True
+	;;
+clip)
+	flameshot screen --clipboard
+	TYPE="Clipboard"
+
+	in_clipboard=True
+	;;
+clip-screen)
+	flameshot screen --clipboard
+	TYPE="Monitor"
+
+	in_clipboard=True
+	;;
+clip-full)
+	flameshot full --clipboard
+	TYPE="Desktop"
+
+	in_clipboard=True
+	;;
+clip-gui)
+	flameshot gui --clipboard
+	TYPE="Snipped"
+
+	in_clipboard=True
+	;;
+pin)
+	flameshot gui --clipboard --pin
+	TYPE="Pinned"
+
+	in_clipboard=True
+	;;
+to-discord)
+	flameshot gui --clipboard --path "$SCREENSHOT_DIR"
+	TYPE="Uploaded to Discord"
+	in_clipboard=True
+	$("$HOME/bin/autodiscord" 'mr-scrot')
+	;;
+esac
+
+# I'm a good scripter : )
+if [[ "$MAKE_SILENT" = "--silent" ]]; then
+	alert="$2"
+fi
+
+case $alert in
+--silent) ;;
+*) "$HOME/bin/notifications/notify-screenshot.sh" "Flameshot" "$TYPE Screenshot" "$in_clipboard" --say-dir ;;
+esac
+
+if [[ "$3" -ne 0 ]]; then
+	eval "$FOLLOW_UP_CMD"
+fi
+
+# vim:ft=sh

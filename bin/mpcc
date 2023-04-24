@@ -15,9 +15,10 @@ vol+ | volu) "$MPD_SCRIPT" up ;;
 vol- | vold) "$MPD_SCRIPT" down ;;
 rate+ | rateu) "$MPD_SCRIPT" rate_up ;;
 rate- | rated) "$MPD_SCRIPT" rate_down ;;
-pp) "$MPD_SCRIPT" toggle_play ;;
+pp | playpause) "$MPD_SCRIPT" toggle_play ;;
 r[1-5]) "$MPD_SCRIPT" rate "$@" ;;
 q | query) "$MPD_SCRIPT" ;;
+getalbum) echo "W.I.P." ;;
 ?)
 	echo "Wrapper Usage:"
 	echo "repeat / loop     - repeat current playlist"
@@ -42,6 +43,9 @@ q | query) "$MPD_SCRIPT" ;;
 	echo
 	echo
 	echo "Other commands are passed to the regular old mpc cli"
+	echo
+	echo
+	echo "WIP: getalbum - get all tracks in current album (gonna put with a rofi script)"
 	;;
 *) mpc "$@" ;;
 esac

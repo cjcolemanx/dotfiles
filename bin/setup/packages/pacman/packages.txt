@@ -71,3 +71,6 @@ yt-dlp # for youtube in mpv
 cyrus-sasl # for gmail in neomutt
 pass # Password manager
 lynx # Text browser
+xsel # Clipboard helper
+clipmenu # Clipboard history
+xclip # CLI clipboard

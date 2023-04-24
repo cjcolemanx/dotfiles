@@ -7,10 +7,13 @@ dotnet/
 email/
 files/
 generate-keybind-pngs.sh
+keepass/
 media/
 maintenance/
 Pywal/
 processes/main.sh
+rofi/csv/keepass-commands.csv
+rofi/rofi-keepass.sh
 services.sh
 utility/playerctl.sh
 utility/man_search.sh
@@ -24,3 +27,4 @@ mpc-status.sh
 mybinds
 mybinds.1
 services.sh
+change_wallpaper
