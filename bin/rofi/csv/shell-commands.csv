@@ -1,0 +1,7 @@
+Discord,~/bin/rofi/rofi-discord.sh
+KeepassXC (WIP),~/bin/rofi/rofi-keepassxc.sh
+Music,~/bin/rofi/rofi-mpcc.sh
+Manpages,~/bin/rofi/rofi-manpage-or-help.sh
+Screenshot,~/bin/rofi/rofi-screenshot.sh
+Simple Shell,~/bin/rofi/rofi-run-simple-shell.sh 'eval'
+System Commands,~/bin/rofi/rofi-system-commands.sh

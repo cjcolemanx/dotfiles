@@ -1,0 +1,9 @@
+Current Monitor,~/bin/screenshot 'screen'
+GUI (Snip),~/bin/screenshot 'gui'
+Full Desktop,~/bin/screenshot 'full'
+WIP,dunstify "TODO" "xdotool Discord script" -h string:x-dunst-stack-tag:todo-script
+Snip and Send to Discord,~/bin/screenshot 'to-discord'
+Monitor (Clipboard Only),~/bin/screenshot 'clip-screen'
+GUI (Clipboard Only),~/bin/screenshot 'clip-gui'
+Full Desktop (Clipboard Only),~/bin/screenshot 'clip-full'
+Pin,~/bin/screenshot 'pin'

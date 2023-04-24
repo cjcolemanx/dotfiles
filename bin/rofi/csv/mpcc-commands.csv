@@ -1,0 +1,10 @@
+View Playlist,~/bin/rofi/mpc-playlist.sh
+Next Song ->,~/bin/mpcc next
+<- Prev Song,~/bin/mpcc prev
+Increase Rating,~/bin/mpcc rate+
+Decrease Rating,~/bin/mpcc rate-
+Play/Pause,~/bin/mpcc playpause
+Next Album ->>,~/bin/mpcc album+
+<<- Prev Album,~/bin/mpcc album-
+Volume +,~/bin/mpcc vol+
+Volume -,~/bin/mpcc vol-

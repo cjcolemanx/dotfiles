@@ -1,0 +1,3 @@
+Script Runner    : Super + Space; Super + Y,~/bin/rofi/run-shell.sh
+Daemon Restarter : Super + Space; Super + R,~/bin/rofi/daemon-restart.sh
+Clipmenu         : Alt + Ctrl + C,clipmenu
