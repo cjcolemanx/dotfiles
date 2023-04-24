@@ -12,7 +12,7 @@
 
 (deflayer qwerty
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  tab q    w    e    r    t    y    u    i    o    p    [    ]    \
   @fnk a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           @spc           ralt rmet rctl
@@ -65,7 +65,7 @@
 (defalias 
   fnk          (tap-hold $ts $ts esc (layer-while-held function-keys))
 
-  ;; Space mode 3==>
+  ;; Space mode 8==>
   spc          (tap-hold-press $td $td spc (layer-toggle space-mode))
   leader       (tap-hold-release $td $tl sldr ,)
 ;;  chord-mode   (multi

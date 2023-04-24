@@ -23,3 +23,4 @@ active_tab_background #10386f
 inactive_tab_foreground #c4c4c5
 inactive_tab_background #37568c
 tab_bar_background #15161a
+tab_bar_margin_color #265fa3
