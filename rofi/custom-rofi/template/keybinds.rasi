@@ -1,0 +1,13 @@
+configuration{
+	kb-mode-complete: "";
+	kb-remove-char-back: "BackSpace,Shift+BackSpace";
+	kb-row-left: "Control+h";
+	kb-row-right: "Control+l";
+	kb-accept-entry: "Control+m,Return,KP_Enter,Control+o,Control+space";
+  kb-row-select: "";
+	kb-remove-to-eol: "";
+	kb-row-down: "Down,Control+j,Control+n";
+	kb-row-up: "Up,Control+k,Control+p";
+}
+
+// vim:ft=css

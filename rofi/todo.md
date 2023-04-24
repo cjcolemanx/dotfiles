@@ -1,1 +1,0 @@
-- [ ] Tmux Script is not usefule w/ Kitty (cuz it already does that stuff)

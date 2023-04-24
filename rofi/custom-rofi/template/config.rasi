@@ -1,5 +1,4 @@
-configuration {
-}
+configuration {}
 @import "keybinds"
 @theme "colors-rofi-light"
 // vim:ft=css

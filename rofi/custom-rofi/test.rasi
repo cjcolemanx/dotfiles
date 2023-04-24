@@ -1,0 +1,9 @@
+configuration {}
+
+#inputbar {
+  color: #ff0000;
+  padding: 8px;
+  children: [prompt, entry];
+}
+
+// vim:ft=css

@@ -1,6 +1,0 @@
-configuration {
-/*	modes: "window,drun,run,ssh";*/
-	modi: "window,drun,run,filebrowser,window";
-/*	font: "mono 12";*/
-	show-icons: true;
-}
