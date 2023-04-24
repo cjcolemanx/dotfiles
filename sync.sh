@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+UPDATE_IGNORE_REMOTE="$1"
+
 cp_dots() {
 	echo "Copying $1 config"
 
@@ -6,7 +8,7 @@ cp_dots() {
 		cp -f "$HOME/.config/$1" ./
 	elif [ -d "$HOME/.config/$1" ]; then
 		# Keep gitignores up to date FIRST
-		if [ -f "./$1/.gitignore" ]; then
+		if [ "$UPDATE_IGNORE_REMOTE" != "" ] && [ -f "./$1/.gitignore" ]; then
 			cp -f "$1/.gitignore" "$HOME/.config/$1/.gitignore"
 		fi
 
